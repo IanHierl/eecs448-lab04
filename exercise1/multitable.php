@@ -2,6 +2,8 @@
 
 <html lang="en">
   <head>
+    <title>Exercise 1 - Multiplication Table</title>
+    <meta charset="utf-8">
   </head>
   <body>
     <table>

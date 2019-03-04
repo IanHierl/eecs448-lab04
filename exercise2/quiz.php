@@ -2,6 +2,8 @@
 
 <html lang="en">
   <head>
+    <title>Exercise 2 - Quiz Results</title>
+    <meta charset="utf-8">
   </head>
   <body>
 <?php
