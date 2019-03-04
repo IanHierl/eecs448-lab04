@@ -4,8 +4,66 @@
   <head>
     <title>Exercise 3 - Customer Frontend</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="formChecker.js" defer></script>
   </head>
   <body>
-    
+    <form action="customerBackend.php" method="POST" id="form1">
+      <fieldset>
+        <legend>Verify User</legend>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" hint="user@example.com"><br>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+      </fieldset>
+      <fieldset>
+        <legend>Item Order Details</legend>
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Item Cost</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>
+              <label for="item1">Item 1</label>
+            </td>
+            <td>$9.99</td>
+            <td>
+              <input type="number" class="quantity" name="item1" id="item1" value="0" min="0">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="item2">Item 2</label>
+            </td>
+            <td>$10.99</td>
+            <td>
+              <input type="number" class="quantity" name="item2" id="item2" value="0" min="0">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="item3">Item 3</label>
+            </td>
+            <td>$11.99</td>
+            <td>
+              <input type="number" class="quantity" name="item3" id="item3" value="0" min="0">
+            </td>
+          </tr>
+        </table>
+        <span>Select Shipping option:</span><br>
+        <label for="7day">Free 7-day shipping: </label>
+        <input type="radio" name="shipping" value="7day" id="7day" checked><br>
+      
+        <label for="3day">$5.00 3-day shipping: </label>
+        <input type="radio" name="shipping" value="3day" id="3day"><br>
+      
+        <label for="overnight">$50.00 overnight shipping: </label>
+        <input type="radio" name="shipping" value="overnight" id="overnight"><br>
+      </fieldset>
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
