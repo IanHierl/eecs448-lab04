@@ -22,10 +22,10 @@ echo "    </div>\n";
     <h2>Sales Receipt:</h2>
     <table id="receipt">
       <tr>
-        <td></td>
-        <td>Quantity</td>
-        <td>Per Item Cost</td>
-        <td>Sub Total</td>
+        <th></th>
+        <th>Quantity</th>
+        <th>Per Item Cost</th>
+        <th>Sub Total</th>
       </tr>
 <?php
 $quant1 = intval($_POST["item1"]);
@@ -69,10 +69,12 @@ switch($_POST["shipping"]) {
   case "3day":
     echo "        <td colspan=2>3-Day Shipping</td>\n";
     echo "        <td>$5</td>\n";
+    $totalCost += 5;
     break;
   case "overnight":
     echo "        <td colspan=2>Overnight Shipping</td>\n";
     echo "        <td>$50</td>\n";
+    $totalCost += 50;
     break;
 }
 ?>
